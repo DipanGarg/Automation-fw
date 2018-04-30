@@ -5,7 +5,7 @@
   <groupId>org.cts</groupId>
   <artifactId>Automation_fw</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <name>Automation_fw</name>
   <url>http://maven.apache.org</url>
@@ -39,7 +39,7 @@
 
 	<build>
 		<plugins>
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
@@ -47,7 +47,7 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
-			</plugin>
+			</plugin> -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
