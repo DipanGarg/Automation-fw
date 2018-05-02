@@ -1,3 +1,4 @@
+
 package tests;
 
 import org.cts.utils.AssertionLibrary;
@@ -25,15 +26,15 @@ public class LoginTests  {
     @Test (priority = 0, description="Invalid Login Scenario with wrong username and password.", dataProvider = "browser-provider")
     public void invalidLoginTest_InvalidUserNameInvalidPasswordGOINGFORWARD (String category) throws InterruptedException {
         //ExtentReports Description
-    	AssertionLibrary.assertEquals("ABC","ABC","String Matches");
+    	AssertionLibrary.assertEquals("ABC","ABC","String Matches"+category);
     	
-    	AssertionLibrary.assertTrue(true,true, "BOOLEAN COMPARISON");
+    	AssertionLibrary.assertTrue(true,false, "BOOLEAN COMPARISON");
     	
     }
     @AfterMethod
     public void handleException()
     {
-    	System.out.println(" i am in after method ");
+    	System.out.println(" i am in after method of login Test");
     	
     }
 

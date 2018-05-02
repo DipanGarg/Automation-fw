@@ -3,15 +3,13 @@
 <suite name="N11 Test Suite" parallel="tests" thread-count="2">
     <listeners>
         <listener class-name="org.cts.listeners.TestListener"/>
-       <!--  <listener class-name="utils.Listeners.AnnotationTransformer"/> -->
+        <!-- <listener class-name="utils.Listeners.AnnotationTransformer"/> -->
     </listeners>
 
     <test name="LoginTestTEST">
         <classes>
            <class name="tests.LoginTests"/>
-          <!--   <class name="tests.RandomTest"/>-->
- 
-          
+    	  <class name="tests.RandomTest"/>
         </classes>
     </test>
 </suite>

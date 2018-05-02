@@ -24,8 +24,9 @@ public class TestListener implements ITestListener {
 	public void onFinish(ITestContext iTestContext) {
 		System.out.println("I am in onFinish method " + iTestContext.getName());
 		// Do tier down operations for extentreports reporting!
-		ExtentTestManager.endTest();
+		//ExtentTestManager.endTest();
 		ExtentManager.getInstance().flush();
+		ExtentTestManager.endTest();
 	}
 
 

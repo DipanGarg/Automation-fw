@@ -35,6 +35,7 @@ public class ExtentManager {
 	}
 
 	public static ExtentReports createInstance(String fileName) {
+	
 		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(fileName);
 		htmlReporter.config().setChartVisibilityOnOpen(true);
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
@@ -42,8 +43,11 @@ public class ExtentManager {
 		htmlReporter.config().setDocumentTitle("DipanGarg-AutomationReports");
 		htmlReporter.config().setEncoding(ENCODING_UTF8);
 		htmlReporter.config().setReportName("Automation-Reports");
+		htmlReporter.setAppendExisting(true);
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
+		
+		System.out.println("CREATE REPORT INSTANCE!" + fileName + extent.getStartedReporters());
 		return extent;
 
 	}
