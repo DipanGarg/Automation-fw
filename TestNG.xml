@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="N11 Test Suite" parallel="tests" thread-count="2">
+<suite name="N11 Test Suite" parallel="tests" thread-count="1">
     <listeners>
         <listener class-name="org.cts.listeners.TestListener"/>
         <!-- <listener class-name="utils.Listeners.AnnotationTransformer"/> -->
@@ -8,7 +8,7 @@
 
     <test name="LoginTestTEST">
         <classes>
-           <class name="tests.LoginTests"/>
+          <!--  <class name="tests.LoginTests"/> -->
     	  <class name="tests.RandomTest"/>
         </classes>
     </test>
