@@ -6,11 +6,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.io.FileNotFoundException;
+
 import org.cts.configHandling.ConfigProvider;
 
 public class RandomTest {
 	
-	
+
 	
 	@BeforeMethod
 	public void setup() {
@@ -18,11 +21,14 @@ public class RandomTest {
 	}
 	
    @Test 
-   public void invalidLoginTest_InvalidUserNameInvalidPassword () throws InterruptedException {
+   public void invalidLoginTest_InvalidUserNameInvalidPassword () throws InterruptedException, FileNotFoundException {
        //ExtentReports Description
 	   AssertionLibrary.assertEquals("ABC","ABC","String Matches PASS: RANDOM TEST");
 	   AssertionLibrary.assertEquals("ABC","ABC","String Matches RANDOM TEST");
-	   String hello = ConfigProvider.getInstance().getProperty("database.host");
+	   
+	  
+			   String hello = ConfigProvider.getInstance().getProperty("dbpassword");
+			   
 		System.out.println("reading from configprovider"+ hello);
    }
   
