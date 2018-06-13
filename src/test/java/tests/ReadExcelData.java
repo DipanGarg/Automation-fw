@@ -11,7 +11,7 @@ public class ReadExcelData {
 	@Test(dataProvider = "readExcel")
 	public void readExcelData_Test(Map<String, String> input) {
 
-		System.out.println(input.get("name"));
+		System.out.println(input.get("Name"));
 	}
 
 	@DataProvider
