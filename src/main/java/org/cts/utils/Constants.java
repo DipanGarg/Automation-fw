@@ -11,4 +11,5 @@ public class Constants {
 	public static final String EXTENT_REPORTS_FILENAME = "ExtentReport_";
 	public static final String EXTENT_REPORTS_PATH =WORKING_DIR + EXTENT_REPORTS_FOLDER + EXTENT_REPORTS_FILENAME+TIME_STAMP+".html";
 	public static final String ENCODING_UTF8 = "utf-8";
+	public static final String TEST_RESOURCES_PATH = "./src/test/resources";
 }
