@@ -3,6 +3,8 @@ package org.cts.configHandling;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 import org.cts.utils.Constants;
@@ -20,8 +22,7 @@ public final class ConfigProvider {
 	 */
 	public static ConfigProvider getInstance(String propertyFileName) throws FileNotFoundException {
 		final ConfigProvider configProvider = new ConfigProvider();
-		String path = PROPERTIES_FILE + propertyFileName + ".properties";
-		configProvider.loadProperties(path);
+		configProvider.loadProperties(propertyFileName);
 		return configProvider;
 	}
 
@@ -51,13 +52,11 @@ public final class ConfigProvider {
 	}
 
 	private void loadProperties(String propertyFile) {
+		ClassLoader loader = Thread.currentThread().getContextClassLoader();		
+		InputStream is = loader.getResourceAsStream("./properties/"+propertyFile+".properties");
 		try {
-			File file = new File(propertyFile);
-			if (file.isFile() && file.getName().endsWith(".properties")) {
-				props.load(new FileInputStream(file));
-
-			}
-		} catch (Exception e) {
+			props.load(is);
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
